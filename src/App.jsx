@@ -16,9 +16,9 @@ function App() {
     
       <Router>
         <Routes>
-<Route path="/"element={<AboutUs/>}/>
+
           <Route path="/test"element={<PartnerBrands/>}/>
-          <Route path="/home" element={<LandingPg />} />
+          <Route path="/" element={<LandingPg />} />
           <Route path="/ourservice" element={<OurService />} />
           <Route path="/ourprocess" element={<OurProcess />} />
         </Routes>
