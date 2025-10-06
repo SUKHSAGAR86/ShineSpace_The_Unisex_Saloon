@@ -6,7 +6,9 @@ import LandingPg from "./components/Landingpg";
 import OurService from "./components/ourService";
 import OurProcess from "./components/ourProcess";
 import PartnerBrands from "./components/PartnerBrands";
-import Testimonial from "./components/CustomerReview";
+
+import Footer from "./components/Footer";
+import AboutUs from "./components/AboutUs";
 
 
 function App() {
@@ -14,7 +16,7 @@ function App() {
     
       <Router>
         <Routes>
-<Route path="/"element={<LandingPg/>}/>
+<Route path="/"element={<AboutUs/>}/>
           <Route path="/test"element={<PartnerBrands/>}/>
           <Route path="/home" element={<LandingPg />} />
           <Route path="/ourservice" element={<OurService />} />

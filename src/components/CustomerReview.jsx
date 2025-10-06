@@ -1,6 +1,7 @@
 
 import React, { useEffect, useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { div } from "framer-motion/client";
 
 const testimonials = [
   {
@@ -42,7 +43,10 @@ const CustomerReview = () => {
   }, [nextTestimonial]);
 
   return (
-    <div className="bg-amber-200 py-8 px-4 text-center relative overflow-hidden">
+<div className=" text-center ">
+  <h1 className="text-center bg-orange-700 font-bold  text-white py-3 text-2xl">Explore Our Reviews</h1>
+<div className="bg-amber-200 py-8 px-4 text-center relative overflow-hidden">
+
       <div className="max-w-4xl mx-auto min-h-[300px] flex flex-col items-center justify-center text-center px-4">
         <AnimatePresence mode="wait">
           <motion.div
@@ -105,7 +109,7 @@ const CustomerReview = () => {
           ></span>
         ))}
       </div>
-    </div>
+    </div></div>
   );
 };
 

@@ -3,11 +3,12 @@ import OurProcess from "./ourProcess";
 import OurService from "./ourService";
 import CustomerReview from "./CustomerReview";
 import SpaSection from "./SpaSection";
-
+import AboutUs from "./AboutUs";
 
 import { CiApple, CiPlay1 } from "react-icons/ci";
 import { FaStar } from "react-icons/fa6";
 import mobileImage from "../assets/images/ChatGPT Image Aug 19, 2025, 02_08_28 PM.png";
+
 
 const LandingPg = () => {
   return (
@@ -80,9 +81,12 @@ const LandingPg = () => {
           </div>
         </div>
       </div>
-      <div><SpaSection/></div>
+      <div><AboutUs/></div>
+   
       <div><OurService /></div>
       <div><OurProcess/></div>
+         <div><SpaSection/></div>
+      
    
       <div><CustomerReview/></div>
    
