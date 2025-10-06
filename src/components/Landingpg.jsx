@@ -1,6 +1,8 @@
 import React from "react";
 import OurProcess from "./ourProcess";
 import OurService from "./ourService";
+import CustomerReview from "./CustomerReview";
+import SpaSection from "./SpaSection";
 
 
 import { CiApple, CiPlay1 } from "react-icons/ci";
@@ -78,8 +80,12 @@ const LandingPg = () => {
           </div>
         </div>
       </div>
-   <div>   <OurProcess/></div>
-   <div><OurService /></div>
+      <div><SpaSection/></div>
+      <div><OurService /></div>
+      <div><OurProcess/></div>
+   
+      <div><CustomerReview/></div>
+   
     </div>
   );
 };

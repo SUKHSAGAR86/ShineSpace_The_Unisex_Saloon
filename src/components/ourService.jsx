@@ -39,7 +39,7 @@ const ServiceCard = [
 ];
 
   return (
-    <div className="text-white bg-black">
+    <div className="text-white bg-black pb-3">
       <div className="p-5 sm:grid place-content-center">
         <div className="grid place-content-center pt-5">
           <div className="grid place-content-center font-bold text-4xl md:text-5xl animate-bounce ">
@@ -70,7 +70,7 @@ const ServiceCard = [
         </div>
      
       </div>
-       <button className="bg-red-600 p-3 mt-6 rounded-2xl text-white font-bold sm:ml-[70px] cursor-pointer hover:bg-red-900 transition-all duration-300">
+       <button className="bg-red-600 p-3 mt-6 rounded-2xl text-white font-bold sm:ml-[1100px] cursor-pointer hover:bg-red-900 transition-all duration-300 ">
               More View
             </button>
     </div>
