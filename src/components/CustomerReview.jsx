@@ -1,120 +1,32 @@
 
-// import React, { useEffect, useCallback, useState } from "react";
-// import { motion, AnimatePresence } from "framer-motion";
-
-// const testimonials = [
-//   {
-//     text: "It's super easy access to the parking lot, breakfast in the hotel is amazing and the spa is awesome! As soon as you get off the elevator for the spa you're greeted with an amazing smell of spa/eucalyptus and it only gets better from there! The free sauna and bar area are nice touches and the cocktails are hand crafted and delicious.",
-//     author: "KATIE",
-//     source: "GOOGLE REVIEW, 5-STARS",
-//   },
-//   {
-//     text: "Absolutely incredible experience. The spa staff are professional and friendly, and the ambiance is relaxing beyond belief.",
-//     author: "JOHN",
-//     source: "TRIPADVISOR, 5-STARS",
-//   },
-//   {
-//     text: "A perfect escape from daily stress — highly recommend!",
-//     author: "SARAH",
-//     source: "YELP, 5-STARS",
-//   },
-//   {
-//   text: "It's super easy access to the parking lot, breakfast in the hotel is amazing and the spa is awesome! As soon as you get off the elevator for the spa you're greeted with an amazing smell of spa/eucalyptus and it only gets better from there! The free sauna and bar area are nice touches and the cocktails are hand crafted and delicious.",
-//   author: "KATIE",
-//   source: "GOOGLE REVIEW, 5-STARS",
-//   image: "https://example.com/katie.jpg", // image URL
-//   stars: 5 // star rating
-// }
-// ];
-
-// const CustomerReview = () => {
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   const nextTestimonial = useCallback(() => {
-//     setCurrentIndex((prev) => (prev + 1) % testimonials.length);
-//   }, []);
-
-//   useEffect(() => {
-//     const intervalId = setInterval(nextTestimonial, 4000);
-//     return () => clearInterval(intervalId);
-//   }, [nextTestimonial]);
-
-//   return (
-//     <div className="bg-amber-200 py-8 text-center relative overflow-hidden">
-//       <div className="max-w-3xl mx-auto min-h-[180px] flex items-center justify-center text-center">
-//         {/* AnimatePresence enables exit + enter animations */}
-//         <AnimatePresence mode="wait ">
-//           <motion.div
-//             key={currentIndex}
-//             initial={{ x: "100%", opacity: 0 }}
-//             animate={{ x: 0, opacity: 1 }}
-//             exit={{ x: "-100%", opacity: 0 }}
-//             transition={{ duration: 0.6, ease: "easeInOut" }}
-//             className="absolute"
-//           >
-//              <p className="mt-3 text-sm text-teal-600 uppercase tracking-wider">
-//               - {testimonials[currentIndex].author},{" "}
-//               {testimonials[currentIndex].source}
-//             </p>
-//             <p className="text-lg md:text-xl text-gray-800 italic p-8">
-//               {testimonials[currentIndex].text}
-//             </p>
-           
-//           </motion.div>
-//         </AnimatePresence>
-//       </div>
-
-//       {/* Dots (Indicators) */}
-//       <div className="flex justify-center space-x-2 mt-8">
-//         {testimonials.map((_, idx) => (
-//           <span
-//             key={idx}
-//             className={`w-3 h-3 rounded-full cursor-pointer transition-all ${
-//               idx === currentIndex ? "bg-teal-600" : "bg-gray-400"
-//             }`}
-//             onClick={() => setCurrentIndex(idx)}
-//             aria-label={`Go to testimonial ${idx + 1}`}
-//           ></span>
-//         ))}
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default CustomerReview;
-
-
-
 import React, { useEffect, useCallback, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const testimonials = [
-{ image: "https://randomuser.me/api/portraits/men/26.jpg",
-     author: "Dr.Abrahim",
+  {
+    image: "https://randomuser.me/api/portraits/men/26.jpg",
+    author: "Dr.Abrahim",
     stars: 5,
-       text: "it only gets better from there! The free sauna and bar area are nice touches and the cocktails are hand crafted and delicious."
+    text: "It only gets better from there! The free sauna and bar area are nice touches and the cocktails are hand crafted and delicious.",
   },
-
-
-  { 
+  {
     image: "https://randomuser.me/api/portraits/women/44.jpg",
-     author: "KATIE",
+    author: "KATIE",
     stars: 4,
-      text: "It's super easy access to the parking lot, breakfast in the hotel is amazing and the spa is awesome! As soon as you get off the elevator for the spa you're greeted with an amazing smell of spa/eucalyptus"
+    text: "It's super easy access to the parking lot, breakfast in the hotel is amazing and the spa is awesome! As soon as you get off the elevator for the spa you're greeted with an amazing smell of spa/eucalyptus",
   },
   {
-      image: "https://randomuser.me/api/portraits/men/32.jpg",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
     author: "JOHN",
-     stars: 5,
-      text: "Absolutely incredible experience. The spa staff are professional and friendly, and the ambiance is relaxing beyond belief."
+    stars: 5,
+    text: "Absolutely incredible experience. The spa staff are professional and friendly, and the ambiance is relaxing beyond belief.",
   },
   {
-    
-    image: "https://randomuser.me/api/portraits/women/65.jpg", 
+    image: "https://randomuser.me/api/portraits/women/65.jpg",
     author: "SONOYA SARAH",
-       stars: 4,
+    stars: 4,
     text: "A perfect escape from daily stress — highly recommend!",
-  }
+  },
 ];
 
 const CustomerReview = () => {
@@ -130,8 +42,8 @@ const CustomerReview = () => {
   }, [nextTestimonial]);
 
   return (
-    <div className="bg-amber-200 py-8 text-center relative overflow-hidden">
-      <div className="max-w-3xl mx-auto min-h-[200px] flex flex-col items-center justify-center text-center">
+    <div className="bg-amber-200 py-8 px-4 text-center relative overflow-hidden">
+      <div className="max-w-4xl mx-auto min-h-[300px] flex flex-col items-center justify-center text-center px-4">
         <AnimatePresence mode="wait">
           <motion.div
             key={currentIndex}
@@ -139,21 +51,20 @@ const CustomerReview = () => {
             animate={{ x: 0, opacity: 1 }}
             exit={{ x: "-100%", opacity: 0 }}
             transition={{ duration: 0.6, ease: "easeInOut" }}
-            className="absolute flex flex-col items-center px-4"
+            className="absolute flex flex-col items-center px-4 w-full"
           >
             {/* Reviewer Image */}
             {testimonials[currentIndex].image && (
               <img
                 src={testimonials[currentIndex].image}
                 alt={testimonials[currentIndex].author}
-                className="w-20 h-20 rounded-full object-cover border-4 border-teal-600 mb-4"
+                className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full object-cover border-4 border-teal-600 mb-4"
               />
             )}
 
-             {/* Author / Source */}
-            <p className="text-sm text-teal-600 uppercase tracking-wider">
+            {/* Author */}
+            <p className="text-sm sm:text-base md:text-lg text-teal-600 uppercase tracking-wider">
               {testimonials[currentIndex].author}
-              {testimonials[currentIndex].source}
             </p>
 
             {/* Stars */}
@@ -163,7 +74,7 @@ const CustomerReview = () => {
                   <svg
                     key={i}
                     xmlns="http://www.w3.org/2000/svg"
-                    className="h-5 w-5 text-yellow-400"
+                    className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 text-yellow-400"
                     viewBox="0 0 20 20"
                     fill="currentColor"
                   >
@@ -174,16 +85,14 @@ const CustomerReview = () => {
             </div>
 
             {/* Testimonial Text */}
-            <p className="text-lg md:text-xl text-gray-800 italic p-4">
+            <p className="text-sm sm:text-base md:text-lg text-gray-800 italic px-4">
               {testimonials[currentIndex].text}
             </p>
-
-           
           </motion.div>
         </AnimatePresence>
       </div>
 
-      {/* Dots (Indicators) */}
+      {/* Dots */}
       <div className="flex justify-center space-x-2 mt-8">
         {testimonials.map((_, idx) => (
           <span
