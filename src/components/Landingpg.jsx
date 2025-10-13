@@ -4,6 +4,7 @@ import OurService from "./ourService";
 import CustomerReview from "./CustomerReview";
 import SpaSection from "./SpaSection";
 import AboutUs from "./AboutUs";
+import Footer from "./Footer";
 
 import { CiApple, CiPlay1 } from "react-icons/ci";
 import { FaStar } from "react-icons/fa6";
@@ -89,6 +90,7 @@ const LandingPg = () => {
       
    
       <div><CustomerReview/></div>
+      <div><Footer/></div>
    
     </div>
   );
