@@ -9,6 +9,7 @@ import PartnerBrands from "./components/PartnerBrands";
 
 import Footer from "./components/Footer";
 import AboutUs from "./components/AboutUs";
+import NavBar from "./components/NavBar";
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
         <Routes>
 
           <Route path="/test"element={<PartnerBrands/>}/>
-          <Route path="/" element={<LandingPg/>} />
+          <Route path="/" element={<NavBar/>} />
           <Route path="/ourservice" element={<OurService />} />
           <Route path="/ourprocess" element={<OurProcess />} />
         </Routes>
